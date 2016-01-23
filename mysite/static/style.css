@@ -1,0 +1,88 @@
+@import url('http://fonts.googleapis.com/css?family=Droid+Serif:normal,bold,italic|Oswald');
+body         { font-family: 'Droid Serif', serif; font-size: 17px; font-weight: normal; color: #000; }
+a            { color: #004B6B; }
+a:hover      { color: slategray; }
+.box         { width: 540px; margin: 40px auto; }
+h1, h2       { font-family: 'Oswald', 'Arial Narrow', sans-serif; font-weight: normal; margin-right:120px; }
+h1           { font-size: 45px; margin: 15px 0 5px 0; }
+h2           { font-size: 24px; margin: 15px 0 5px 0; }
+h3, h4       { font-family: 'Droid Serif', serif; }
+h3           { font-size: 17px; font-weight: bold; }
+h4           { font-size: 17px; font-weight: normal;}
+p            { font-family: 'Droid Serif', serif; font-size: 15px; font-weight: normal; color: black; margin-right:140px; }
+.menu        { color: slategray; }
+.footer      { color: dimgray; font-size: 13px; }
+ul           { font-size:14px; line-height:18px; }
+
+form         {}
+#search {
+    margin-left:25px;
+    background: #F7F7F7;
+    width: 70%;
+    padding: 10px 10px 10px 10px;
+    font: 15px 'Droid Serif', serif;
+    border:1px solid #E4E4E4;
+}
+#search label {
+    font-size:15px;
+    text-align: right;
+}
+#search input[type="text"] {
+    border: 1px solid #DADADA;
+    background-color: #FFFFFF;
+    color: #404040;
+    width: 300px;
+    height: 30px;
+    outline: 0 none;
+    padding: 3px 3px 3px 3px;
+    font-size: 15px;
+    line-height: 18px;
+}
+#search input[type="submit"] {
+    background-color: #cccccc;
+    width:100px;
+    border:none;
+    font-family: 'Droid Serif';
+    font-size: 15px;
+    border-radius:2px;
+}
+
+div          {}
+.sectionhead {
+    padding:5px;
+    height:50px;
+    width:25%;
+    float:left;
+}
+.dashes {
+    margin-left:25%;
+    height:50px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    line-height:100px;
+}
+.location {
+    font-size:16px;
+    padding:10px;
+}
+.position {
+    font-size:15px;
+    padding:15px;
+}
+#container {
+    width:900px;
+    margin: auto;
+}
+#name {
+    width:40%;
+    height:100px;
+    float:left;
+}
+#contact {
+    margin-left:40%;
+    height:100px;
+    line-height:100px;
+    text-align:center;
+    font-family: 'Droid Serif', serif;
+    font-size:13px;
+}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %} - My Application</title>
+    {% endblock %}
+</head>
+
+<body>
+  <p class="menu" align=center>
+  overview // radio // writing // programming // resume // contact
+  </p>
+
+<div id="container">
+  {% block page_content %}
+  {% endblock %}
+</div>
+
+  <p class="footer" align=center>
+    &copy; Copyright 2016 by Becky Sullivan
+  </p>
+</body>
+</html>
