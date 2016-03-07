@@ -4,6 +4,7 @@ from mysite.models import DrugDB
 from sqlalchemy import or_
 from flask import Flask, request, render_template
 from mysite.forms import SearchForm
+from mysite.page_functions import get_examples
 
 app.test_request_context().push()
 
@@ -32,7 +33,8 @@ def resume():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    examples = get_examples()
+    return render_template('index.html', examples=examples)
 
 @app.errorhandler(404)
 def page_not_found(e):

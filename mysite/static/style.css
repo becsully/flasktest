@@ -97,7 +97,6 @@ div {}
 .nav a:visited { color: white; }
 .nav a:hover { color: yellow; }
 
-
 #clearfix {
     clear: both;
     }
@@ -110,35 +109,74 @@ div {}
     display: inline-block;
     }
 
-@media screen and (min-width: 768px) {
-	#header {
-    position: fixed;
-    width: 25% !important;
-    float: left;
-    height: 100%;
-    overflow: hidden;
-        }
-    
-    .nav {
-    width: 80%;
-        }
-
-    #content {
-    float: left;
-    margin-left: 25%;
-    width: 60%;
-    overflow-y: auto;
-    padding: 2em 2em 2em 3em;
-        }
+.example {
+    padding: .5em;
+    width: 100%;
+    color: black;
+    position: relative;
     }
 
 .img-container {
-    width: 80%;
+    width: 100%;
+    display: inline-block;
     }
 
 .img-container img {
     width: 100%;
     height: auto;
+    }
+
+.text-container {
+    width: 80%;
+    display: inline-block;
+    }
+
+@media screen and (min-width: 768px) {
+	#header {
+        position: fixed;
+        width: 25%;
+        max-width: 250px;
+        float: left;
+        height: 100%;
+        overflow: hidden;
+        }
+    
+    .nav {
+        width: 80%;
+        }
+
+    #content {
+        float: left;
+        margin-left: 25%;
+        width: 60%;
+        overflow-y: auto;
+        padding: 2em 2em 2em 3em;
+        }
+    
+    .img-container {
+        width: 45%;
+        }
+    
+    .text-container {
+        width: 45%;
+        margin-left: 1em;
+        }
+    }
+
+@media screen and (min-width: 1000px) {
+    #content {
+        margin-left: 250px;
+        }
+    }
+
+span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: url('empty.gif');
     }
 
 p { 

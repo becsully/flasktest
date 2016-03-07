@@ -8,4 +8,17 @@
 <div class="img-container">
 <img src="/static/colombia.jpg" />
 </div>
+{% for example in examples %}
+<div class="example">
+<a href="{{ example["Link"] }}"><span class="example"></span></a>
+<div class="img-container">
+<img src="{{ "/static/" + example["Image"] }}">
+</div>
+<div class="text-container">
+<h3>{{ example["Headline"] }}</h3>
+<p>{{ example["Paragraph"] }}</p>
+<p><b>{{ example["Role"] }}</b></p>
+</div>
+</div>
+{% endfor %}
 {% endblock %}
