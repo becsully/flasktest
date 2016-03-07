@@ -4,18 +4,6 @@ html, body {
     height: 100%; 
     }
 
-html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    }
-
-*, *:before, *:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
-    }
-
 body { 
     font-family: 'Droid Serif', serif; 
     font-size: 17px; 
@@ -60,87 +48,6 @@ h4 {
     font-weight: normal;
     }
 
-div {}
-
-#header {
-    background-color: seagreen;
-    color: white;
-    width: 100%;
-    float: none;
-    padding: 1em;
-    text-align: center;
-    overflow: auto;
-    display: inline-block;
-    }
-
-#header:before {
-    font-size: 0px;
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    }  
-
-.center {
-    font-size: 17px;
-    display: inline-block;
-    vertical-align: middle;
-    }
-
-.nav {
-    padding: .5em; 
-    display: inline-block;
-    color: white;
-    }
-
-.nav a:link { color: white; }
-.nav a:visited { color: white; }
-.nav a:hover { color: yellow; }
-
-
-#clearfix {
-    clear: both;
-    }
-
-#content {
-    width: 100%;
-    float: left;
-    padding: 2em;
-    overflow: auto;
-    display: inline-block;
-    }
-
-@media screen and (min-width: 768px) {
-	#header {
-    position: fixed;
-    width: 25% !important;
-    float: left;
-    height: 100%;
-    overflow: hidden;
-        }
-    
-    .nav {
-    width: 80%;
-        }
-
-    #content {
-    float: left;
-    margin-left: 25%;
-    width: 60%;
-    overflow-y: auto;
-    padding: 2em 2em 2em 3em;
-        }
-    }
-
-.img-container {
-    width: 80%;
-    }
-
-.img-container img {
-    width: 100%;
-    height: auto;
-    }
-
 p { 
     font-family: 'Droid Serif', serif; 
     font-size: 15px; 
@@ -162,8 +69,7 @@ ul {
     line-height:1.4em; 
     }
 
-form {}
-
+form         {}
 #search {
     margin-left:1.2em;
     background: #F7F7F7;
@@ -183,18 +89,68 @@ form {}
     background-color: #FFFFFF;
     color: #404040;
     width: 50%;
-    height: 2em;
+    height: 1.5em;
     outline: 0 none;
-    margin-left: 0.5em;
     padding: 0.2em;
     font-size: 15px;
+    line-height: 1.2em;
     }
 
 #search input[type="submit"] {
     background-color: #cccccc;
-    width: 6em;
-    border: none;
+    width:6em;
+    border:none;
     font-family: 'Droid Serif';
     font-size: 15px;
-    border-radius: 2px;
+    border-radius:2px;
     }
+
+div          {}
+
+div.header {
+    background: seagreen;
+    width: 20%;
+    height: 100%;
+    padding: 1.5em;
+    float: left;
+    color: white;
+    position: fixed;
+    }
+
+div.content {
+    width: 70%;
+    padding: 3em;
+    float: left;
+    overflow: auto;
+    position: relative; 
+    }
+
+div.footer {
+    background: #000;
+    width: 100%;
+    padding: 1.4em;
+    float: left;
+    color: #EEEEEE;
+    overflow: auto;
+    }
+
+.clearfix{
+    clear:both;
+    }
+
+@media screen and (max-width: 500px) {
+	.header {
+    background: seagreen;
+    width: 100% !important;
+    padding: 1.5em;
+    float: none;
+    }
+    
+    .content {
+    background: white;
+    width: 100%;
+    padding: 1.5em;
+    float: left;
+    }
+	
+}

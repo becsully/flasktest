@@ -4,6 +4,6 @@ from wtforms.validators import Required
 
 
 class SearchForm(Form):
-    search_term = StringField('Search by drug name: ')
+    search_term = StringField('')
     submit = SubmitField('Search')
 

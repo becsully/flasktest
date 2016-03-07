@@ -8,15 +8,27 @@
 </head>
 
 <body>
-  <p class="menu" align=center>
-  overview // radio // writing // programming // resume // contact
-  </p>
-<div id="container">
+
+<div id="header" align=center>
+ <h1>Becky Sullivan</h1>
+ <p><a href="/" class="nav">overview</a></p>
+ <p>radio</p>
+ <p>writing</p>
+ <p>programming</p>
+ <p>resume</p>
+ <p>contact</p>
+ <div class="clearfix"></div>
+</div>
+
+<div id="content">
   {% block page_content %}
   {% endblock %}
 </div>
+
+<div id="footer">
   <p class="footer" align=center>
     &copy; Copyright 2016 by Becky Sullivan
   </p>
+</div>
 </body>
 </html>
