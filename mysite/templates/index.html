@@ -1,24 +1,27 @@
 {% extends "base.html" %}
 
-{% block title %}Becky Becky Becky{% endblock %}
+{% block title %}Becky Sullivan{% endblock %}
 
 {% block page_content %}
-<h1>Hello! This is my website.</h1>
-<h4><a href="/drugs">check out some drug prices</a></h4>
-<div class="img-container">
-<img src="/static/colombia.jpg" />
-</div>
+<h2 align=center>portfolio</h2>
+
 {% for example in examples %}
+{% set img_url = '../static/' + example['Image'] %}
 <div class="example">
-<a href="{{ example["Link"] }}"><span class="example"></span></a>
-<div class="img-container">
-<img src="{{ "/static/" + example["Image"] }}">
+<div class="img-container" style="background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3)), url('{{ img_url }}'); background-size: cover;">
+<img src="{{ img_url }}" style="visibility: hidden;" />
+<header>
+<h3><a href="{{ example["Link"] }}">{{ example["Headline"] }}</a></h3>
 </div>
 <div class="text-container">
-<h3>{{ example["Headline"] }}</h3>
 <p>{{ example["Paragraph"] }}</p>
 <p><b>{{ example["Role"] }}</b></p>
 </div>
 </div>
 {% endfor %}
 {% endblock %}
+
+
+
+
+

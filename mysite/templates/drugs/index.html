@@ -3,9 +3,9 @@
 {% block title %}Search{% endblock %}
 
 {% block page_content %}
-<h1>Drug Prices</h1>
-<h3>Prescription drugs are getting more expensive. And it's happening much, much faster than inflation.</h3>
-<h4>This search looks at the average prices that pharmacies are paying to acquire the drugs we buy, and shows how those prices have changed from 2013 to today. (The data comes from the Centers for Medicare and Medicaid Services, which survey hundreds of pharmacies each week about how much they are paying for drugs.)</h4>
+<h2 align="center">drug prices</h2>
+<h4>Prescription drugs are getting more expensive. And it's happening much, much faster than inflation.</h4>
+<h5>This search looks at the average prices that pharmacies are paying to acquire the drugs we buy, and shows how those prices have changed from 2013 to today. (The data comes from the Centers for Medicare and Medicaid Services, which survey hundreds of pharmacies each week about how much they are paying for drugs.)</h5>
         <form method="POST" id="search">
             {{ form.search_term.label }} {{ form.search_term(id='search', placeholder=" Search by drug name") }}
             {{ form.submit(id='search') }}

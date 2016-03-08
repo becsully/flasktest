@@ -31,46 +31,53 @@ a:hover {
     color: slategray;
     }
 
-h1, h2 { 
-    font-family: 'Oswald', 'Arial Narrow', sans-serif; 
+h1, h2 {
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
     font-weight: normal; 
-    margin-right:120px; 
     }
-    
+
+h3, h4, h5 { 
+    font-family: 'Droid Serif', serif; 
+    }
+
 h1 { 
     font-size: 45px; 
-    margin: 15px 0 5px 0; 
     }
-    
-h2 { 
-    font-size: 24px; 
-    margin: 15px 0 5px 0; 
-    }
-    
-h3, h4 { 
-    font-family: 'Droid Serif', serif; 
-    font-size: 17px;
+
+h2 {
+    font-size: 35px;
     }
 
 h3 { 
-    font-weight: bold; 
+    font-size: 6vw;
+    text-align: left;
+    margin-left: 1em;
     }
 
 h4 { 
+    font-size: 19px;
+    font-weight: bold;
+    }
+
+h5 {
+    font-size: 17px;
     font-weight: normal;
     }
 
 div {}
 
 #header {
-    background-color: seagreen;
+    background-image: linear-gradient(rgba(17,70,60,0.45), rgba(17,70,60,0.45)),
+                      url('reservoir.jpg');
+    background-position: center;
     color: white;
     width: 100%;
     float: none;
     padding: 1em;
     text-align: center;
-    overflow: auto;
+    overflow: hidden;
     display: inline-block;
+    background-size: cover;
     }
 
 #header:before {
@@ -93,9 +100,20 @@ div {}
     color: white;
     }
 
-.nav a:link { color: white; }
-.nav a:visited { color: white; }
-.nav a:hover { color: yellow; }
+.nav a:link { 
+    color: white; 
+    text-decoration: none;
+    }
+
+.nav a:visited {
+    color: white;
+    text-decoration: none;
+    }
+
+.nav a:hover {
+    color: yellow;
+    text-decoration: none;
+    }
 
 #clearfix {
     clear: both;
@@ -104,13 +122,11 @@ div {}
 #content {
     width: 100%;
     float: left;
-    padding: 2em;
     overflow: auto;
     display: inline-block;
     }
 
 .example {
-    padding: .5em;
     width: 100%;
     color: black;
     position: relative;
@@ -119,6 +135,8 @@ div {}
 .img-container {
     width: 100%;
     display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
     }
 
 .img-container img {
@@ -126,12 +144,45 @@ div {}
     height: auto;
     }
 
+.img-container > header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+}
+
+.img-container a:link, a:visited {
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 1px 0 black;
+}
+
+.img-container a:hover {
+    color: yellow;
+    text-decoration: none;
+    text-shadow: 0 1px 0 black;
+}
+
 .text-container {
-    width: 80%;
-    display: inline-block;
+    width: 92%;
+    display: block;
+    margin-left: 4%;
     }
 
 @media screen and (min-width: 768px) {
+    
+    h2 {
+        margin-top: 10vh;
+        font-size: 6vmax;
+        line-height: 4vmax;
+        }
+    
+    h3 {
+        font-size: 2vmax;
+        margin-right: 35%;
+        text-align: right;
+        }
+        
 	#header {
         position: fixed;
         width: 25%;
@@ -148,18 +199,25 @@ div {}
     #content {
         float: left;
         margin-left: 25%;
-        width: 60%;
+        width: 70%;
         overflow-y: auto;
-        padding: 2em 2em 2em 3em;
+        padding: 1em 0 0 1em;
         }
     
     .img-container {
-        width: 45%;
+        width: 70%;
+        }
+    
+    .img-container > header {
+        bottom: 0;
+        top: 70%;
+        padding: 20px 10px;
         }
     
     .text-container {
-        width: 45%;
+        width: 25%;
         margin-left: 1em;
+        display: inline-block;
         }
     }
 
